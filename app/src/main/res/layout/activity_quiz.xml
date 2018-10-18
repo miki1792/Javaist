@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity"
+    android:background="@drawable/quizpagebg"
+    >
+
+    <TextView
+        android:id="@+id/quiz_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/title_quiz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="#fefefe"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/quiz_question_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/quiz_title_view"
+        android:text="@string/question_tv"
+        android:textColor="#fefefe"
+        android:textSize="18sp" />
+
+    <RadioGroup
+        android:id="@+id/quiz1_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@id/quiz_question_view">
+
+        <RadioButton
+            android:id="@+id/quiz1_radio_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_tv"
+            android:textColor="#fefefe"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <RadioButton
+            android:id="@+id/quiz1_radio_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_tv"
+            android:textColor="#fefefe"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"/>
+
+        <RadioButton
+            android:id="@+id/quiz1_radio_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/question_tv"
+            android:textColor="#fefefe"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"/>
+
+    </RadioGroup>
+</RelativeLayout>
