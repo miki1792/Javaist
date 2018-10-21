@@ -19,6 +19,9 @@ public class HomeActivity extends AppCompatActivity {
         //Linking the XML view to this java class.
         setContentView(R.layout.activity_home);
 
+        //getting the intent from last activity/ies
+        Intent intent = getIntent();
+
         //assigning the XML buttons to the java objects that were previously declared
         btn_learn = (Button) findViewById(R.id.learn_button);
         btn_quiz = (Button) findViewById(R.id.test_button);
@@ -33,7 +36,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //setting an onClick method for the second activity.
+        //setting an onClick method for the second button.
         btn_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

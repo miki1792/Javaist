@@ -15,4 +15,10 @@
     <string name="question_tv">QUESTIONS QUESTIONS QUESTIONS QUESTIONS QUESTIONS QUESTIONS</string>
     <string name="test_if_else">Start Testing Your If-Else Statements Now</string>
     <string name="test_loops">Start Testing Your Loops Now</string>
+    <string name="button_back">BACK</string>
+    <string name="button_next">NEXT</string>
+
+    //from Eric
+    <string name="title_activity_lesson_one">LessonOne</string>
+    <string name="button_skip">SKIP</string>
 </resources>

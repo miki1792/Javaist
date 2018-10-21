@@ -22,6 +22,47 @@
         android:textColor="#fefefe"
         android:textSize="36sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/quiz_title_view"
+        android:id="@+id/score_count_group">
+
+        <TextView
+
+            android:id="@+id/text_view_question_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question: 1/x"
+            android:textColor="#fefefe"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="24dp" />
+
+        <TextView
+
+            android:id="@+id/text_view_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: 0"
+            android:layout_below="@id/quiz_title_view"
+            android:textColor="#fefefe"
+            android:textSize="18sp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="24dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:text="00:30"
+        android:layout_alignParentEnd="true"
+        android:textColor="#fefefe"
+        android:layout_marginEnd="16dp"/>
+
     <TextView
         android:id="@+id/quiz_question_view"
         android:layout_width="wrap_content"
@@ -30,8 +71,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_below="@id/quiz_title_view"
+        android:layout_below="@id/score_count_group"
         android:text="@string/question_tv"
         android:textColor="#fefefe"
         android:textSize="18sp" />
@@ -42,8 +82,9 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="32dp"
-        android:layout_below="@id/quiz_question_view">
+        android:layout_marginEnd="24dp"
+        android:layout_below="@id/quiz_question_view"
+        android:layout_marginTop="18dp">
 
         <RadioButton
             android:id="@+id/quiz1_radio_btn1"
@@ -74,4 +115,17 @@
             android:layout_marginEnd="8dp"/>
 
     </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quiz_btn_next"
+        android:text="@string/button_next"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#fefefe"
+        android:textSize="14sp"
+        android:layout_below="@id/quiz1_radio_group"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"/>
 </RelativeLayout>
