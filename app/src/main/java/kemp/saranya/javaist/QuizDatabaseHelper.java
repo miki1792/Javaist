@@ -18,7 +18,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "MyQuiz.db";
     //define the version of database has been used and
     // the version name will also be used in QuizDatabaseHelper
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     //create an instance of the SQLiteDatabase type.
     private SQLiteDatabase db;
@@ -52,11 +52,10 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
-        //this calss is to update the database
+        //this class is to update the database
 
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + QuestionTable.TABLE_NAME);
         onCreate(sqLiteDatabase);
-
     }
 
     public void fillQuestionTable(){
@@ -70,6 +69,45 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         addQuestions(questionFour);
         Questions questionFive = new Questions("Which looping process is best used when the number of iterations is known?", "while", "do-while", "for",3);
         addQuestions(questionFive);
+        Questions questionSix = new Questions ("Which of the following statements is true. \n" +
+                "\n" +
+                "1. for every 'if' there should be an 'else'. \n" +
+                "2. for every 'else' there should be an 'if'. \n" +
+                "3. 'if' block can exist without an 'else' \n" +
+                "4. 'if' condition can be used inside another 'if' condition.", "Only 2, 3 and 4 are true", "Only 2 and 3 are true","Only 3 is true.", 1);
+        addQuestions(questionSix);
+        Questions questionSeven = new Questions ("What will be the output of the following program?\n" +
+                "\n" +
+                "public class ShortTest {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        boolean x = true;\n" +
+                "        boolean y = false;\n" +
+                "        if (x && y) {\n" +
+                "            System.out.println(true);\n" +
+                "        } else {\n" +
+                "            System.out.println(false);\n" +
+                "        }\n" +
+                "    }\n" +
+                "}","Compilation Error","true","false",3);
+        addQuestions(questionSeven);
+        Questions questionEight = new Questions ("What will be the output of the following program?\n" +
+                "\n" +
+                "public class ShortTest {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        boolean x = true;\n" +
+                "        boolean y = false;\n" +
+                "        if (x || y) {\n" +
+                "            System.out.println(true);\n" +
+                "        } else {\n" +
+                "            System.out.println(false);\n" +
+                "        }\n" +
+                "    }\n" +
+                "}","Runtime Error","true","false", 2);
+        addQuestions(questionEight);
+        Questions questionNine = new Questions("The default value of a static integer variable of a class in Java is,","0","1","Null",1);
+        addQuestions( questionNine);
+        Questions questionTen = new Questions ("To prevent any method from overriding, we declare the method as,","static","const ","final ",3);
+        addQuestions(questionTen);
     }
 
     //Ref. http://75.103.78.27/MathBits/Java/Looping/MCLooping.htm

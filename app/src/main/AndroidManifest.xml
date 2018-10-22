@@ -22,7 +22,6 @@
         <activity android:name=".TestMenuActivity" />
         <activity android:name=".LearnIfElseActivity" />
         <activity android:name=".LearnLoopActivity" />
-        <activity android:name=".QuizLoopActivity" />
         <activity android:name=".HomeActivity"></activity>
     </application>
 

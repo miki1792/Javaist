@@ -1,8 +1,6 @@
 package kemp.saranya.javaist;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,43 +8,41 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 public class QuizActivity extends AppCompatActivity {
 
+    //declaring all textViews that would be referred to later.
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
-    private TextView textViewCountDown;
 
+    //declaring all the radio buttons, and the radio group to later be used.
     private RadioGroup rGroup;
     private RadioButton rb1;
     private RadioButton rb2;
     private RadioButton rb3;
 
+    //declaring the button
     private Button btnConfirmNxt;
-
-    private ColorStateList textColorDefaultRb; // changing the color based on if students' input answers are correct or wrong
-
+    //declaring the questionList that would be called.
     private List<Questions> questionsList;
-
-    private int questionCounter; //showing how many questions has been shown
-
-    private int questionCountTotal; //the total questions in our arraylist
-
-    private Questions currentQuestionNo;// the number of current question
-
-    private int score;//scores gained
-
-    private boolean answered;//to detect if a question has been answered yet
+    //showing how many questions has been shown
+    private int questionCounter;
+    //the total questions in our arraylist
+    private int questionCountTotal;
+    // the number of current question
+    private Questions currentQuestionNo;
+    //scores gained
+    private int score;
+    //to detect if a question has been answered yet
+    private boolean answered;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //linking this java file to the XML 'activity_quiz'
         setContentView(R.layout.activity_quiz);
 
         //getting the intent from last activity/ies
@@ -56,15 +52,13 @@ public class QuizActivity extends AppCompatActivity {
         textViewQuestion = findViewById(R.id.quiz_question_view);
         textViewScore = findViewById(R.id.text_view_score);
         textViewQuestionCount = findViewById(R.id.text_view_question_count);
-        textViewCountDown = findViewById(R.id.text_view_countdown);
-
         rGroup = findViewById(R.id.quiz1_radio_group);
         rb1 = findViewById(R.id.quiz1_radio_btn1);
         rb2 = findViewById(R.id.quiz1_radio_btn2);
         rb3 = findViewById(R.id.quiz1_radio_btn3);
-
         btnConfirmNxt = findViewById(R.id.quiz_btn_next);
 
+        //setting an onClick() method for the btnConfirmNxt
         btnConfirmNxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,24 +72,22 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
-        //just the default text colour of radio button
-        textColorDefaultRb = rb1.getTextColors();
-
         QuizDatabaseHelper quizDatabaseHelper = new QuizDatabaseHelper(this);
-        // implement all the 5 questions
+        // implement all the 10 questions
         questionsList = quizDatabaseHelper.getAllQuestions();
 
+        //getting the size of the questions list and assign the int value to the count total.
         questionCountTotal = questionsList.size();
         //to shuffle our question list
         Collections.shuffle(questionsList);
 
         //call showNextQuestion to go to the next question if there are any questions left
         showNextQuestion();
-
     }
 
     private void checkAnswer(){
         answered = true;
+        btnConfirmNxt.setText("NEXT");
 
         //this will return the ID of the radio button that was checked (selected)
         //and assigned the ID to this 'rbSelected' variable.
@@ -111,41 +103,10 @@ public class QuizActivity extends AppCompatActivity {
             //updating the TextView
             textViewScore.setText("score: "+score);
         }
-
-        showSolution();
-    }
-
-    private void showSolution(){
-        rb1.setTextColor(Color.RED);
-        rb2.setTextColor(Color.RED);
-        rb3.setTextColor(Color.RED);
-
-        switch (currentQuestionNo.getAnswerNo()){
-            case 1:
-                rb1.setTextColor(Color.GREEN);
-                break;
-            case 2:
-                rb2.setTextColor(Color.GREEN);
-                break;
-            case 3:
-                rb3.setTextColor(Color.GREEN);
-        }
-
-        //checking if we have any questions left.
-        if(questionCounter<questionCountTotal){
-            btnConfirmNxt.setText("NEXT");
-        } else{
-            btnConfirmNxt.setText("FINISH");
-        }
     }
 
     private void showNextQuestion(){
-        //set all colours of the buttons back to the default colour.
-        rb1.setTextColor(textColorDefaultRb);
-        rb2.setTextColor(textColorDefaultRb);
-        rb3.setTextColor(textColorDefaultRb);
-
-        //clear the selection(UNSELECT) once the process of answering questions is done,
+        //clear the selection(UN-SELECT) once the process of answering questions is done,
         // so it can move onto the next question without the color from the last question
         rGroup.clearCheck();
 

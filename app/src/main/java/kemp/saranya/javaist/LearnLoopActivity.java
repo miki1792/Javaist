@@ -53,7 +53,7 @@ public class LearnLoopActivity extends YouTubeBaseActivity {
             @Override
             public void onClick(View v) {
                 //creating an intent to open a new activity (LearnMenuActivity)
-                Intent intent = new Intent (LearnLoopActivity.this, QuizLoopActivity.class);
+                Intent intent = new Intent (LearnLoopActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
         });
