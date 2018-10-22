@@ -13,8 +13,8 @@
     <string name="java_loops2">Start Learning Your Java Loops Now</string>
     <string name="button_start">START</string>
     <string name="question_tv">QUESTIONS QUESTIONS QUESTIONS QUESTIONS QUESTIONS QUESTIONS</string>
-    <string name="test_if_else">Start Testing Your If-Else Statements Now</string>
-    <string name="test_loops">Start Testing Your Loops Now</string>
+    <string name="test_name">IF-ELSE and LOOPS</string>
+    <string name="test_details">Test your If-Else statements, and Loops now </string>
     <string name="button_back">BACK</string>
     <string name="button_next">NEXT</string>
     <string name="button_menu">MENU</string>

@@ -32,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif"
-        android:text="@string/java_if_else"
+        android:text="@string/test_name"
         android:textColor="#fefefe"
         android:textSize="24sp"
         />
@@ -41,73 +41,47 @@
         android:id="@+id/test_menu_if_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/test__menu_if_title"
+        android:layout_centerHorizontal="true"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif"
-        android:text="@string/test_if_else"
+        android:text="@string/test_details"
+        android:textAlignment="center"
         android:textColor="#fefefe"
-        android:textSize="18sp"
-        />
-
-    <TextView
-        android:id="@+id/test_menu_loops"
+        android:textSize="18sp" />
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/test_menu_if_2"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/java_loops"
-        android:textColor="#fefefe"
-        android:textSize="24sp"
-        />
+        android:layout_marginTop="24dp">
 
-    <TextView
-        android:id="@+id/test_menu_loops_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/test_menu_loops"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/test_loops"
-        android:textColor="#fefefe"
-        android:textSize="18sp"
-        />
 
-    <Button
-        android:id="@+id/test_menu_btn2"
-        style="@android:style/Widget.Holo.Button.Toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/test_menu_loops_2"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/button_test"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:textColor="#fefefe"
-        android:textSize="14sp"
-        />
+        <Button
+            android:id="@+id/test_menu_back_to_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Holo.Button.Toggle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#fefefe"
+            android:textSize="14sp"
+            android:text="@string/button_menu"
+            />
 
-    <Button
-        android:id="@+id/test_menu_back_to_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@android:style/Widget.Holo.Button.Toggle"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:textColor="#fefefe"
-        android:textSize="14sp"
-        android:layout_below="@id/test_menu_btn2"
-        android:text="@string/button_menu"/>
+        <Button
+            android:id="@+id/test_menu_btn2"
+            style="@android:style/Widget.Holo.Button.Toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_test"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="#fefefe"
+            android:textSize="14sp"
+            android:layout_marginStart="45dp"
+            />
+
+    </LinearLayout>
 
 </RelativeLayout>
