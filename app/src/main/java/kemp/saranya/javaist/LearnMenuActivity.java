@@ -11,6 +11,7 @@ public class LearnMenuActivity extends AppCompatActivity {
     //declaring the buttons in java class
     private Button btn_learn_if_else;
     private Button btn_learn_loop;
+    private Button btn_back_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class LearnMenuActivity extends AppCompatActivity {
         //assigning the XML buttons to the java objects that were previously declared
         btn_learn_if_else = (Button) findViewById(R.id.learn_menu_btn1);
         btn_learn_loop = (Button) findViewById(R.id.learn_menu_btn2);
+        btn_back_menu = (Button) findViewById(R.id.learn_menu_back_to_button);
 
         //getting the intent from last activity/ies
         Intent intent = getIntent();
@@ -44,6 +46,16 @@ public class LearnMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //setting an onClick method for the second button of the activity.
+        btn_back_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (LearnMenuActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }

@@ -17,8 +17,6 @@
     <string name="test_loops">Start Testing Your Loops Now</string>
     <string name="button_back">BACK</string>
     <string name="button_next">NEXT</string>
-
-    //from Eric
-    <string name="title_activity_lesson_one">LessonOne</string>
+    <string name="button_menu">MENU</string>
     <string name="button_skip">SKIP</string>
 </resources>

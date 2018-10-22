@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             swipingDots.addView(dot[i]);
         }
 
-        //if the users start to swipe the slideshows, the dot color of the current slide will be orange
+        //if the users start to swipe the slide shows, the dot color of the current slide will be orange
         if(dot.length > 0){
 
             dot[position].setTextColor(getResources().getColor(R.color.colorAccent));

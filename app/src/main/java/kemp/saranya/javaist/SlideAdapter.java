@@ -24,19 +24,19 @@ public class SlideAdapter extends PagerAdapter {
     public int[] slide_image = {
             R.drawable.youtube,
             R.drawable.quiz,
-            R.drawable.fb
+            R.drawable.score1
     };
 
     public String[] slide_headings = {
             "Video Tutorial",
             "MCQs",
-            "Facebook Sharing"
+            "Score"
     };
 
     public String[] slide_intro = {
             "Simply click a video lesson to start your journey!",
             "Do the MCQs to test your understanding to the lesson!",
-            "Share the scores you have gained to compete with your friends!"
+            "Track your performance via the score on the top!"
     };
 
 

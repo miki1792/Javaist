@@ -18,6 +18,7 @@ public class Questions {
     }
 
 
+    //constructor for the Questions type
     public Questions(String question, String option1, String option2, String option3, int answerNo) {
         this.question = question;
         this.option1 = option1;
@@ -26,6 +27,7 @@ public class Questions {
         this.answerNo = answerNo;
     }
 
+    //setters and getters for all variables
     public String getQuestion() {
         return question;
     }

@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/learn_menu_btn1"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="42dp"
         android:fontFamily="sans-serif"
         android:text="@string/java_loops"
         android:textColor="#fefefe"
@@ -99,5 +99,17 @@
         android:textColor="#fefefe"
         android:textSize="14sp"
         />
+
+    <Button
+        android:id="@+id/learn_menu_back_to_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Button.Toggle"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="#fefefe"
+        android:textSize="14sp"
+        android:layout_below="@id/learn_menu_btn2"
+        android:text="@string/button_menu"/>
 
 </RelativeLayout>
