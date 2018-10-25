@@ -19,4 +19,7 @@
     <string name="button_next">NEXT</string>
     <string name="button_menu">MENU</string>
     <string name="button_skip">SKIP</string>
+    <string name="if_else_desc">An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.</string>
+    <string name="loop_desc">A loop is a programming function that iterates a statement or condition based on specified boundaries.
+        The loop function uses almost identical logic and syntax in all programming languages.</string>
 </resources>

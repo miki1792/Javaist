@@ -80,8 +80,8 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/quiz_view"
         android:layout_marginTop="8dp"
-        android:fontFamily="sans-serif"
         android:text="@string/detail_test"
+        android:fontFamily="sans-serif"
         android:textColor="#fefefe"
         android:textSize="18sp"
          />

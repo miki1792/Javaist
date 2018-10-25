@@ -14,13 +14,13 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:textColor="#fefefe"
-        android:textSize="36dp"/>
+        android:textSize="36sp"/>
 
 
     <com.google.android.youtube.player.YouTubePlayerView
         android:id="@+id/learn_loop_view"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_below="@id/learn_pg_title"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
@@ -28,13 +28,29 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp" />
 
+    <TextView
+        android:id="@+id/learn_desc_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/learn_loop_view"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif"
+        android:isScrollContainer="true"
+        android:text="@string/loop_desc"
+        android:textColor="#fefefe"
+        android:textSize="14sp"
+        tools:isScrollContainer="true" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/learn_loop_view"
+        android:layout_below="@id/learn_desc_text"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center_horizontal">
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
 
         <Button
             android:id="@+id/button_loop_back"
@@ -44,7 +60,8 @@
             android:text="@string/button_back"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="#fefefe"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            />
 
         <Button
             android:id="@+id/button_loop_test"

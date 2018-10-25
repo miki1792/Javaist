@@ -36,12 +36,12 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        //setting an onClick method for the second button.
+        //setting an onClick method for the quiz button.
         btn_quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //creating an intent to open a new activity (TestMenuActivity)
-                Intent intent = new Intent (HomeActivity.this, TestMenuActivity.class);
+                Intent intent = new Intent (HomeActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
         });

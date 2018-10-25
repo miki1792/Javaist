@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -21,12 +22,11 @@ public class LearnIfElseActivity extends YouTubeBaseActivity {
     //declaring the buttons in java class
     private Button if_btn_back;
     private Button if_btn_test;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Linking the XML view to this java class.
-        setContentView(R.layout.activity_learn_loop);
+        setContentView(R.layout.activity_learn_if_else);
 
         //getting the intent from last activity/ies
         Intent intent = getIntent();
@@ -36,6 +36,7 @@ public class LearnIfElseActivity extends YouTubeBaseActivity {
         if_btn_test = (Button) findViewById(R.id.button_loop_test);
         //assigning the youtube player view to the XML file object
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.learn_loop_view);
+
 
         //setting an onClick method for the Back button of the button.
         if_btn_back.setOnClickListener(new View.OnClickListener() {

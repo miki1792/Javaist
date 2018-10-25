@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class LearnMenuActivity extends AppCompatActivity {
 
@@ -12,6 +13,7 @@ public class LearnMenuActivity extends AppCompatActivity {
     private Button btn_learn_if_else;
     private Button btn_learn_loop;
     private Button btn_back_menu;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class LearnMenuActivity extends AppCompatActivity {
         btn_learn_loop = (Button) findViewById(R.id.learn_menu_btn2);
         btn_back_menu = (Button) findViewById(R.id.learn_menu_back_to_button);
 
+
         //getting the intent from last activity/ies
         Intent intent = getIntent();
 
@@ -34,8 +37,7 @@ public class LearnMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (LearnMenuActivity.this, LearnIfElseActivity.class);
                 startActivity(intent);
-            }
-        });
+                    }});
 
         //setting an onClick method for the second button of the activity.
         btn_learn_loop.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +46,7 @@ public class LearnMenuActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent (LearnMenuActivity.this, LearnLoopActivity.class);
                 startActivity(intent);
+
             }
         });
 

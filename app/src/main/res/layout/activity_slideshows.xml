@@ -10,16 +10,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="109dp"
+        android:layout_marginTop="40dp"
         app:srcCompat="@drawable/youtube" />
 
     <TextView
         android:id="@+id/slide_heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/slide_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="174dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="18dp"
         android:text="HEADING"
         android:textColor="#fefefe"
         android:textSize="35sp" />
@@ -28,9 +29,9 @@
         android:id="@+id/slide_intro"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="34dp"
+        android:layout_below="@id/slide_heading"
+        android:layout_marginTop="24dp"
         android:text="TextView"
         android:textColor="#fefefe"
         tools:textSize="40sp" />
